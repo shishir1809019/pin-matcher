@@ -15,17 +15,16 @@ const clearLastE1 = document.querySelector('.lastNumClear')
 const submitPin = document.querySelector('.submit-btn')
 let disNum = ''
 
-
+// UserInput section
 numbersE1.forEach(function(number){
     number.addEventListener('click',function(e){
         disNum += e.target.innerText
         displayE1.value = disNum 
         // console.log(disNum)
-    })
-   
+    })   
 })
 
-
+//clearInput section
 clearAllE1.addEventListener('click',function(e){
     displayE1.value = ''
     disNum = ''
@@ -37,8 +36,7 @@ clearLastE1.addEventListener('click',function(e){
     disNum = changedValue
 })
 
-
-
+// notify section
 submitPin.addEventListener('click',function(e){
     let randomNumber = document.getElementById('random_code').value
     let displayValue = document.getElementById('userInput').value
@@ -56,8 +54,7 @@ submitPin.addEventListener('click',function(e){
     else{
         document.getElementById('doNotMatch').style.display = 'block'
         document.getElementById('match').style.display = 'none'
-    }
-    
+    }   
 })
 
 
