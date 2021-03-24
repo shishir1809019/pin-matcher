@@ -29,6 +29,10 @@ clearAllE1.addEventListener('click',function(e){
     disNum = ''
     
 })
+clearLastE1.addEventListener('click',function(e){
+    displayE1.value = substring(0,displayE1.value.length)
+    disNum = substring(0,disNum.innerText)
+})
 
 
 
@@ -39,19 +43,16 @@ submitPin.addEventListener('click',function(e){
     console.log(displayValue)
     
 
-
-    let compareNumber = notifyNotMatch === notifyMatch
+    // let compareNumber = randomNumber === displayValue
     // console.log(compareNumber)
     
-    if(compareNumber == true){
-        const notifyMatch = document.getElementsByClassName('match')
-        notifyMatch.style.display = 'block'
-        // notifyNotMatch.style.display = 'none'
+    if(randomNumber == displayValue){
+        document.getElementById('match').style.display = 'block'
+        document.getElementById('doNotMatch').style.display = 'none'
     } 
     else{
-        const notifyNotMatch = document.getElementsByClassName('doNotMatch')
-        notifyNotMatch.style.display = 'block'
-        // notifyMatch.style.display = 'none'
+        document.getElementById('doNotMatch').style.display = 'block'
+        document.getElementById('match').style.display = 'none'
     }
     
 })

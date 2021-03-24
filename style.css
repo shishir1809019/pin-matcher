@@ -102,7 +102,7 @@ color: #E0B612;
     display: block;
     
 }
-.match, .doNotMatch{display: none;}
+#match, #doNotMatch{display: none;}
 
 
 .action-left {
