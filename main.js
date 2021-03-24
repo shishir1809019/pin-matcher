@@ -13,9 +13,9 @@ const numbersE1 = document.querySelectorAll('.number')
 const clearAllE1 = document.querySelector('.all-clear')
 const clearLastE1 = document.querySelector('.lastNumClear')
 const submitPin = document.querySelector('.submit-btn')
-
-
 let disNum = ''
+
+
 numbersE1.forEach(function(number){
     number.addEventListener('click',function(e){
         disNum += e.target.innerText
@@ -24,14 +24,17 @@ numbersE1.forEach(function(number){
     })
    
 })
+
+
 clearAllE1.addEventListener('click',function(e){
     displayE1.value = ''
     disNum = ''
     
 })
 clearLastE1.addEventListener('click',function(e){
-    displayE1.value = substring(0,displayE1.value.length)
-    disNum = substring(0,disNum.innerText)
+    changedValue = document.getElementById('userInput').value.toString().slice(0, -1)
+    displayE1.value = changedValue
+    disNum = changedValue
 })
 
 
